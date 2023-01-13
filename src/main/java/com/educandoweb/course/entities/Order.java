@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 @Data
@@ -15,7 +16,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @Entity
 @Table(name = "tb_order")
-public class Order {
+public class Order implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
