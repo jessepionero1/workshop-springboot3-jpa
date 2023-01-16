@@ -28,4 +28,10 @@ public class UserServiceImpl implements UserService{
         Optional<User> obj = userRepository.findById(id);
         return obj.get();
     }
+
+    @Override
+    @Transactional
+    public User insert(User obj) {
+        return userRepository.save(obj);
+    }
 }
