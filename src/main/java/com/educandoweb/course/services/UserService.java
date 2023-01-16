@@ -9,4 +9,6 @@ public interface UserService {
     User findById(Long id);
     User insert(User obj);
 
+    public void delete(Long id);
+
 }

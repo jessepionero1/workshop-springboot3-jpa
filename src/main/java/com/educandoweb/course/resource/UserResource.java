@@ -38,4 +38,10 @@ public class UserResource {
         // Retorna o status 201 (Criado) e a localização do recurso criado no cabeçalho "Location" e o objeto criado
         return ResponseEntity.created(uri).body(obj);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id){
+        userService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }
